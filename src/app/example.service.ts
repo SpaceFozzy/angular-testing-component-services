@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Module } from './module.model'
 
 const APIResponse = [
   {id: 1, title: "First Module", description: "This is the first module that is loaded."},
@@ -11,7 +12,7 @@ export class ExampleService {
 
   constructor() { }
 
-  getProgrammesByWrapper(): Promise<any[]> {
+  getProgrammesByWrapper(): Promise<Module[]> {
     return Promise.resolve(APIResponse);
   }
 
