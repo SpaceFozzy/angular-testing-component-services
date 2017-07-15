@@ -10,16 +10,16 @@ import { Module } from './module.model'
 export class AppComponent {
   public status: string = "Ready";
   public modules: Module[] = [];
-  constructor (private exampleService: ExampleService) { }
+  constructor(private exampleService: ExampleService) { }
 
   getModules() {
-        this.status = "Getting classes...";
+    this.status = "Getting classes...";
 
-        this.exampleService.getProgrammesByWrapper().then(((res) => {
-            this.status = "Sorting classes...";
-            this.displayModules(res);
-            this.status = "Update success!";
-        }));
+    this.exampleService.getProgrammesByWrapper().then(((res) => {
+      this.status = "Sorting classes...";
+      this.displayModules(res);
+      this.status = "Update success!";
+    }));
   }
 
   displayModules(res: any) {
