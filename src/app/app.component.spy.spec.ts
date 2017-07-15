@@ -7,6 +7,11 @@ import { Module } from './module.model';
 describe('AppComponent', () => {
   let component: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
+  /*
+    Define the mock data we want returned from the real service. Our spy
+    will watch the real service, but once the getProgrammesByWrapper()
+    function is called, it will interject and return this data.
+  */
   const mockData = [
     {
       id: 1,
@@ -25,16 +30,19 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
-      providers: [ExampleService]
+      // Provide the real service
+      providers: [ ExampleService ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
 
-    // exampleService actually injected into the component
+    /* 
+      Get the real service from the component injector and set up the spy
+      to intercept the getProgrammesByWrapper() function and return our mock data
+    */
     let exampleService = fixture.debugElement.injector.get(ExampleService);
     spyOn(exampleService, 'getProgrammesByWrapper').and.returnValue(Promise.resolve(mockData));
-
   }));
 
 

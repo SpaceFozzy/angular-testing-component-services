@@ -6,17 +6,17 @@ import { Module } from './module.model'
 @Component({
   selector: 'app-root',
   template: `
-    <h1>
-      Mocking an Angular Service for Test
-    </h1>
-    <p>Status: {{status}}</p>
-    <section *ngIf="modules.length" id="module-list">
-      Module List:
-      <ul>
-        <li *ngFor="let module of modules">{{module.title}}: {{module.description}}</li>
-      </ul>
-    </section>
-    <button (click)="getModules()">Get Modules</button>
+  <h1>
+    Angular: Testing A Service-Dependant Component
+  </h1>
+  <p>Status: {{status}}</p>
+  <section *ngIf="modules.length" id="module-list">
+    Module List:
+    <ul>
+      <li *ngFor="let module of modules">{{module.title}}: {{module.description}}</li>
+    </ul>
+  </section>
+  <button (click)="getModules()">Get Modules</button>
   `
 })
 export class AppComponent {
