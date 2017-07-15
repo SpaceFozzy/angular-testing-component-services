@@ -1,5 +1,6 @@
-# AngularServiceTestStub
+# Testing Angular Component Services
 
+This Angular project is an example of how to test a component that depends on a service.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
 
 ## Development server
