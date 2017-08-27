@@ -1,6 +1,12 @@
 # Testing Angular Component Services
 
 This Angular project is an example of how to test a component that depends on a service.
+
+* The component under test is `src/app/app.component.ts` [here](https://github.com/SpaceFozzy/angular-testing-component-services/blob/master/src/app/app.component.spec.ts).
+* The service that is being mocked is `src/app/example.service.ts` [here](https://github.com/SpaceFozzy/angular-testing-component-services/blob/master/src/app/example.service.ts).
+* The component test example that mocks the service is `src/app/app.component.spec.ts` [here](https://github.com/SpaceFozzy/angular-testing-component-services/blob/master/src/app/app.component.spec.ts).
+* A component test example that users a spy with the real service is `src/app/app.component.spy.spec.ts` [here](https://github.com/SpaceFozzy/angular-testing-component-services/blob/master/src/app/app.component.spy.spec.ts).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
 
 ## Development server
