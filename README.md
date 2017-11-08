@@ -1,6 +1,6 @@
 # Testing Angular Component Services
 
-This Angular project is an example of how to test a component that depends on a service.
+From my StackOverflow post [here](https://stackoverflow.com/questions/44649963/cannot-read-property-mobileserviceclient-of-undefined-testing/45023772#45023772). This Angular project is an example of how to test a component that depends on a service.
 
 A recommended approach [by Google][1], rather than using the actual service, is to use a test-double for unit testing service-dependent components. While it seems to make sense to load in your required services, a unit test should really only be focused on testing your component code.
 >A component-under-test doesn't have to be injected with real services. In fact, it is usually better if they are test doubles (stubs, fakes, spies, or mocks). The purpose of the spec is to test the component, not the service, and real services can be trouble.
